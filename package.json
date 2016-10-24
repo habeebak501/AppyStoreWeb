@@ -1,0 +1,33 @@
+{
+  "name": "appstore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "http": "^0.0.0",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/habeebak501/AppStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/habeebak501/AppStore/issues"
+  },
+  "homepage": "https://github.com/habeebak501/AppStore#readme",
+  "engines": "v6.4.0",
+  "description": "",
+
+"config": {
+   "unsafe-perm": true
+ }
+}

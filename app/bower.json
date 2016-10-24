@@ -1,0 +1,22 @@
+{
+  "name": "AppStore",
+  "homepage": "https://github.com/habeebak501/ipl2016",
+  "authors": [
+    "habeebak501 <habeebak501@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "video.js": "videojs#^5.12.2",
+    "ng-image-cache": "^0.3.0"
+  }
+}
