@@ -1,17 +1,25 @@
+<!--
+*@FileName:searchImages.html
+*@Created By:Habeeb
+*@Date:16-10-2016
+*@Purpose:To display the searching Images
+  -->
 <div>
-    <div class="container2">
-      <div class="outerbox">
-        <div class="row">
-            <div class="span5" style="display: inline-block " ng-repeat="x in result1" class='img-responsive'>
-                <div class="card card-1">
-                  <img class="img" style='border-radius: 12%' ng-src='{{x.image_path}}' width="250" height="150" />
-                  <span class="icon videoIcon playS"></span>
-                  <p class="p1">{{x.title}}</p>
-              <span class="icon1 moreIcon"></span>
-              <br>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="container2">
+		<div class="outerbox">
+			<div class="row">
+				<center> <img id="mySpinner" src="images/magnify.gif" ng-show="loading"></center>
+				<div class="span5" style="display: inline-block " ng-repeat="x in result1" class='img-responsive'>
+					<div class="card card-1">
+						<center>
+							<img class="img" style='border-radius: 12%' ng-src='{{x.image_path}}' width="250" height="150" /></center>
+						<span class="icon videoIcon playS"></span>
+						<p class="p1">{{x.title}}</p>
+						<span class="icon1 moreIcon"></span>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

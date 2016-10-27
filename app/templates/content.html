@@ -1,34 +1,42 @@
 <!--
 *@FileName:content.html
 *@Created By:Habeeb
-*@Date:
+*@Date:16-10-2016
 *@Purpose:To display the content images
   -->
 <a ui-sref="search"><img class="float_right" ng-src='images/Button_6_search-min.png' height="50" width="50"></a>
 <img ng-click="myGoBack()" ng-src="images/Button_14_back-min.png" height="50" weight="50">
 <center>
-    <h1 style="color:white;font-family:courier;top:10px;">{{caption}}</h1></center>
+	<h1 style="color:white;font-family:courier;top:10px;">{{caption}}</h1>
+</center>
 <div class="container1">
-    <div class="outerbox">
-        <div class="row">
-            <center>
-                <div class="span5" style="display: inline-block " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class='img-responsive'>
-                    <a>
-                        <div class="card card-1">
-                            <img class="img" style='border-radius: 10%;' ng-src='{{x.image_path}}' width="250" height="150" ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid,content_count:content_count})' />
-                            <span class="icon videoIcon playS"></span>
-                            <p class="p1">{{x.title}}</p>
-                    </a>
-                    <br>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
+	<div class="outerbox">
+		<div class="row">
+			<center>
+                <!--Showing the Spinner image for loading Images-->
+				<img id="mySpinner" src="images/gears.gif" ng-show="loading">
+
+				<div class="span5" style="display: inline-block " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage"
+					class='img-responsive'>
+					<a>
+                        <!--displaying the Images in Card View-->
+						<div class="card card-1">
+							<img class="img" style='border-radius: 10%;' ng-src='{{x.image_path}}' width="250" height="150" ui-sref='video({url:x.dnld_url,poster:x.image_path,pid:pcatid,cid:catid,content_count:content_count})'
+							/>
+                            <!--displaying the video icon on image-->
+							<span class="icon videoIcon playS"></span>
+						<p class="p1">{{x.title}}</p>
+					</a>
+					<br>
+					</div>
+				</div>
+			</center>
+		</div>
+	</div>
 </div>
-<div class="btn pull-left">
-    <button class="button" ng-click="pagination.prevPage()" ng-hide="pagination.page == 0" ng-click="pagination.prevPage()">❮ Previous </button>
+<!--<div class="btn pull-left">
+	<button class="button" ng-click="pagination.prevPage()" ng-hide="pagination.page == 0" ng-click="pagination.prevPage()">❮ Previous </button>
 </div>
 <div class="btn pull-right">
-    <button class="button" ng-click="pagination.nextPage()" ng-hide="pagination.page + 1 >= pagination.numPages" ng-click="pagination.nextPage()">Next ❯</button>
-</div>
+	<button class="button" ng-click="pagination.nextPage()" ng-hide="pagination.page + 1 >= pagination.numPages" ng-click="pagination.nextPage()">Next ❯</button>
+</div>-->

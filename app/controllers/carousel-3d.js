@@ -1,3 +1,9 @@
+/**
+*@FileName:carousel-3d.js
+*@Created By:Habeeb
+*@Date:
+*@Purpose:To display the images for CarouselView
+  */
 
 (function () {
     'use strict';

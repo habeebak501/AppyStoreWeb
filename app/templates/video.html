@@ -1,7 +1,7 @@
 <!--
 *@FileName:video.html
 *@Created By:Habeeb
-*@Date:
+*@Date:16-10-2016
 *@Purpose:To display the videos
   -->
 <img ng-click="myGoBack()" ng-src="images/Button_14_back-min.png" height="50" weight="50">
@@ -20,10 +20,11 @@
     </center>
     <br>
     <center>
-      <div class="container7">
+      <!-- <div class="container7"> -->
+        <img id="mySpinner" src="images/ripple.gif" ng-show="loading">
         <div class="outerbox">
             <!-- <div class="row"> -->
-                <div class="span5" ng-click="changeVideo(x.dnld_url)" style="display: inline-block " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class='img-responsive'>
+                <div class="span5" ng-click="changeVideo(x.dnld_url)" style="display: inline; margin-left:0px; " ng-repeat="x in result | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" class='img-responsive'>
                     <a>
                         <div class="card card-1">
                             <!-- <a ng-swipe-right="pagination.prevPage()" ng-swipe-left="pagination.nextPage()"> -->
@@ -37,7 +38,7 @@
                 <!-- </div> -->
             </div>
         </div>
-        </div>
+        <!-- </div> -->
     </center>
 
 <div class="btn pull-left">
